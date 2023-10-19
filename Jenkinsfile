@@ -21,28 +21,13 @@ pipeline {
             steps {
                 bat 'terraform init'
 		bat 'terraform plan'
-		bat 'terraform apply'
+		bat 'terraform apply -auto-approve'
             }
         }
       
 
-                stage('Despliegue Development') {
-            when {branch 'development'}
-            steps {
-                sh 'aws s3 cp dist/angular-app/ s3://proyecto-frank-s3-dev --recursive'
-              
-        
-            }
-        }
 
 
-              stage('Despliegue staging') {
-            when {branch 'staging'}
-            steps {
-                sh 'aws s3 cp dist/angular-app/ s3://proyecto-frank-s3-staging --recursive'
-              
-        
-            }
         }
 
 
