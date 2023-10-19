@@ -9,17 +9,15 @@ resource "aws_instance" "frank_instance" {
 #!/bin/bash
 sudo sed -i "/#\$nrconf{restart} = 'i';/s/.*/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
 sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install awscli -y
+sudo apt-get upgrade -y
 sudo apt-get install nginx -y
 cd /var/www/
 sudo chgrp ubuntu html
 sudo chown ubuntu html
+cd html
 wget https://iac-frank.s3.amazonaws.com/binaries.zip
-sudo apt install unzip
+sudo apt-get install unzip
 unzip binaries.zip
-cd binaries
-cp /binaries/ /var/www/html/
 EOF
   tags = {
     Name = "PublicInstance"
