@@ -17,9 +17,19 @@ resource "aws_security_group" "security_group04" {
     from_port        = 80
     to_port          = 80
     protocol         = "tcp"
-    cidr_blocks      = ["152.231.0.0/16"]
+    cidr_blocks      = [0.0.0.0/0"]
     # ipv6_cidr_blocks = ["::/0"]
   }
+
+  ingress {
+    description      = "SSH Access Terraform and Jenkins server"
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
+    cidr_blocks      = [3.238.38.49/32"]
+    # ipv6_cidr_blocks = ["::/0"]
+  }
+
 
    egress {
      from_port        = 0
