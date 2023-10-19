@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-	label 'windows-agent'
-	}   
+    agent any
     
 
     //Declaracion de valores de entorno
