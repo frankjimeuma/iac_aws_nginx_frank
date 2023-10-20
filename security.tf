@@ -17,7 +17,7 @@ resource "aws_security_group" "security_group04" {
     from_port        = 80
     to_port          = 80
     protocol         = "tcp"
-    cidr_blocks      = [0.0.0.0/0"]
+    cidr_blocks      = ["0.0.0.0/0"]
     # ipv6_cidr_blocks = ["::/0"]
   }
 
@@ -26,7 +26,7 @@ resource "aws_security_group" "security_group04" {
     from_port        = 80
     to_port          = 80
     protocol         = "tcp"
-    cidr_blocks      = [3.238.38.49/32"]
+    cidr_blocks      = ["3.238.38.49/32"]
     # ipv6_cidr_blocks = ["::/0"]
   }
 
