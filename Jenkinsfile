@@ -16,13 +16,18 @@ pipeline {
                 echo "Demostracion de creacion de IaC por medio de Terraform en AWS"
             }
         }
-      
-        stage('Correr Terraform para instalar la infraestrucrtura requerida') {
+
+	stage('Proceder a eliminar toda infrastructura creada por Terraform en AWS!') {
             steps {
-                bat 'terraform init'
                 bat 'terraform destroy -auto-approve'
-		bat 'terraform plan'
-		bat 'terraform apply -auto-approve'
+            }
+        }
+      
+       // stage('Correr Terraform para instalar la infraestrucrtura requerida') {
+            //steps {
+               // bat 'terraform init'
+		//bat 'terraform plan'
+		//bat 'terraform apply -auto-approve'
             }
         }
       
