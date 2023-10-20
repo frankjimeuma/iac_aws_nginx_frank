@@ -20,7 +20,9 @@ pipeline {
 
 	stage('Proceder a eliminar toda infrastructura creada por Terraform en AWS!') {
             steps {
-                bat 'terraform destroy -auto-approve'
+                bat 'terraform plan -out=plan.out'
+		bat 'terraform destroy -auto-approve'
+		bat 'terraform destroy plan.out'
             }
         }
       
