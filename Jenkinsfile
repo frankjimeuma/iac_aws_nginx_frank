@@ -31,3 +31,5 @@ pipeline {
 		bat 'terraform apply -auto-approve'
             }
         }
+}
+}
