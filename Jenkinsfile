@@ -12,20 +12,22 @@ pipeline {
 
 	
     stages {
-        stage('Bienvenida!') {
+        stage('Bienvenidos Estos es una Demostracion de creacion de IaC por medio de Terraform en AWS') {
             steps {
                 echo "Demostracion de creacion de IaC por medio de Terraform en AWS"
             }
         }
 
-	stage('Proceder a eliminar toda infrastructura creada por Terraform en AWS!') {
+	stage('Proceder a crear la infrastructura con Terraform en AWS!') {
             steps {
-                bat 'terraform refresh'
-		bat 'terraform plan -destroy'
-		bat 'terraform destroy'
+		bat 'terraform init'
+		bat 'terraform plan'
+		bat 'terraform apply -auto-approve'
             }
         }
-      
 
-}
+
+   
+
+    }
 }
