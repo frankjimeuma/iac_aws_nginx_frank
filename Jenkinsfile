@@ -20,15 +20,15 @@ pipeline {
 
         stage('Correr Terraform para instalar la infraestrucrtura requerida') {
              steps {
-                bat 'dir'
+                //bat 'dir'
 		//bat 'terraform state rm'
 		//bat 'dir'
-		bat 'terraform refresh'
-		bat 'dir'
-		//bat 'terraform destroy -auto-approve'
-		bat 'dir'
-		bat 'terraform apply -auto-approve'
-		bat 'dir'
+		//bat 'terraform refresh'
+		//bat 'dir'
+		bat 'terraform destroy -auto-approve'
+		//bat 'dir'
+		//bat 'terraform apply -auto-approve'
+		//bat 'dir'
             }
         }
 
