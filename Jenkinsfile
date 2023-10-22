@@ -18,11 +18,9 @@ pipeline {
             }
         }
 
-	stage('Proceder a crear la infrastructura con Terraform en AWS!') {
-            steps {
-		bat 'terraform init'
-		bat 'terraform plan'
-		bat 'terraform apply -auto-approve'
+        stage('Correr Terraform para instalar la infraestrucrtura requerida') {
+             steps {
+                bat 'terraform destroy -auto-approve'
             }
         }
 
