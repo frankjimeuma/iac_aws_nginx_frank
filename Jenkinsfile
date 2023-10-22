@@ -25,7 +25,7 @@ pipeline {
 		//bat 'dir'
 		bat 'terraform refresh'
 		bat 'dir'
-		bat 'terraform destroy -auto-approve'
+		//bat 'terraform destroy -auto-approve'
 		bat 'dir'
 		bat 'terraform apply -auto-approve'
 		bat 'dir'
