@@ -18,7 +18,7 @@ pipeline {
             }
         }
 
-        stage('Correr Terraform para instalar la infraestrucrtura requerida') {
+        stage('Corriendo Terraform para instalar la infraestrucrtura y software requerido para nuestra App en Angular!') {
              steps {
                 //bat 'dir'
 		//bat 'terraform state rm'
@@ -27,7 +27,8 @@ pipeline {
 		//bat 'dir'
 		bat 'terraform destroy -auto-approve'
 		//bat 'dir'
-		//bat 'terraform apply -auto-approve'
+		bat 'terraform plan'
+		bat 'terraform apply -auto-approve'
 		//bat 'dir'
             }
         }
