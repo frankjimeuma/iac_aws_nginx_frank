@@ -27,8 +27,8 @@ pipeline {
 		//bat 'dir'
 		bat 'terraform destroy -auto-approve'
 		//bat 'dir'
-		bat 'terraform plan'
-		bat 'terraform apply -auto-approve'
+		//bat 'terraform plan'
+		//bat 'terraform apply -auto-approve'
 		//bat 'dir'
             }
         }
